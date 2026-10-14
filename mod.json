@@ -1,0 +1,54 @@
+{
+  "geode": "5.9.0",
+  "gd": { "win": "2.2081", "android": "2.2081", "mac": "2.2081", "ios": "2.2081" },
+  "id": "r387.art-agent",
+  "name": "R387",
+  "version": "v1.0.0",
+  "developer": "R387",
+  "description": "Art Agent: select blocks, describe the art in any language, and it is drawn right in the editor in their shape.",
+  "tags": ["editor", "content", "interface", "online"],
+  "settings": {
+    "server-url": {
+      "type": "string",
+      "name": "Server URL",
+      "description": "Address of your R387 server (see server/README).",
+      "default": "http://127.0.0.1:8387"
+    },
+    "license-key": {
+      "type": "string",
+      "name": "License key",
+      "description": "Key that holds your generation packs.",
+      "default": ""
+    },
+    "resolution": {
+      "type": "int",
+      "name": "Detail",
+      "description": "Pixels per block side. Higher = finer art, more objects.",
+      "default": 2, "min": 1, "max": 4,
+      "control": { "slider": true }
+    },
+    "palette": {
+      "type": "int",
+      "name": "Max colors",
+      "default": 16, "min": 4, "max": 32,
+      "control": { "slider": true }
+    },
+    "block-id": {
+      "type": "int",
+      "name": "Pixel object ID",
+      "description": "Object used as a pixel. 211 is the square deco block.",
+      "default": 211, "min": 1, "max": 5000
+    },
+    "color-channel-base": {
+      "type": "int",
+      "name": "First color channel",
+      "description": "Palette colors use this channel and the ones after it.",
+      "default": 850, "min": 1, "max": 960
+    },
+    "max-objects": {
+      "type": "int",
+      "name": "Object limit",
+      "default": 4000, "min": 100, "max": 20000
+    }
+  }
+}
